@@ -8,7 +8,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: Make 'DNS over HTTPS' queries.
+Description: Make 'DNS over HTTPS' (<https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html>) queries.
 URL: https://gitlab.com/hrbrmstr/playdoh
 BugReports: https://gitlab.com/hrbrmstr/playdoh/issues
 Encoding: UTF-8

@@ -1,5 +1,6 @@
 #' Make 'DNS over HTTPS' Queries
 #'
+#' - RFC: <https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html>
 #' - URL: <https://gitlab.com/hrbrmstr/playdoh>
 #' - BugReports: <https://gitlab.com/hrbrmstr/playdoh/issues>
 #'

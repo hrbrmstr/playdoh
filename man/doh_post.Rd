@@ -20,3 +20,6 @@ doh_post(name, type = "A",
 \description{
 Issue the query of type \code{type} for \code{name} to the DoH endpoint specified at \code{server_path}.
 }
+\references{
+\url{https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html}
+}

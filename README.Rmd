@@ -20,6 +20,8 @@ Make 'DNS over HTTPS' Queries
 
 Make 'DNS over HTTPS' Queries
 
+DoH RTFM: <https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html>
+
 ## What's Inside The Tin
 
 The following functions are implemented:

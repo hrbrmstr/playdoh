@@ -6,6 +6,7 @@
 #' @param type DNS query type (defaults to "`A`")
 #' @param server_path full URL path to the DoH server quer endpoint (defaults to Quad9).
 #' @return `NULL` (if the query failed) or a `data.frame` (tibble)
+#' @references <https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html>
 #' @export
 doh_post <- function(name, type = "A", server_path = "https://dns.quad9.net/dns-query") {
 

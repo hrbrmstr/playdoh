@@ -7,6 +7,7 @@
 \title{Make 'DNS over HTTPS' Queries}
 \description{
 \itemize{
+\item RFC: \url{https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html}
 \item URL: \url{https://gitlab.com/hrbrmstr/playdoh}
 \item BugReports: \url{https://gitlab.com/hrbrmstr/playdoh/issues}
 }
