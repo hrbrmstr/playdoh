@@ -4,7 +4,7 @@
 \name{playdoh}
 \alias{playdoh}
 \alias{playdoh-package}
-\title{...}
+\title{Make 'DNS over HTTPS' Queries}
 \description{
 \itemize{
 \item URL: \url{https://gitlab.com/hrbrmstr/playdoh}
@@ -14,3 +14,4 @@
 \author{
 Bob Rudis (bob@rud.is)
 }
+\keyword{internal}

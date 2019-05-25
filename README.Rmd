@@ -14,18 +14,24 @@ options(width=120)
 
 # playdoh
 
+Make 'DNS over HTTPS' Queries
+
 ## Description
+
+Make 'DNS over HTTPS' Queries
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+- `doh_post`: Make a POST DoH Request (wireformat)
 
 ## Installation
 
 ```{r install-ex, eval=FALSE}
 devtools::install_git("https://sr.ht.com/~hrbrmstr/playdoh.git")
 # or
-devtools::install_git("https://gitlab.com/hrbrmstr/playdoh.git")
+devtools::install_gitlab("hrbrmstr/playdoh.git")
 # or (if you must)
 devtools::install_github("hrbrmstr/playdoh")
 ```
@@ -34,10 +40,19 @@ devtools::install_github("hrbrmstr/playdoh")
 
 ```{r lib-ex}
 library(playdoh)
+library(tidyverse) # for printing
 
 # current version
 packageVersion("playdoh")
 
+```
+
+### Basic functionality
+
+```{r}
+doh_post("rud.is")
+
+doh_post("lenovo.com", "txt")
 ```
 
 ## playdoh Metrics
