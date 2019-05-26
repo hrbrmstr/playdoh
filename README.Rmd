@@ -52,9 +52,9 @@ packageVersion("playdoh")
 ### Basic functionality
 
 ```{r}
-doh_post("rud.is")
+doh_get("rud.is")
 
-doh_post("lenovo.com", "txt")
+doh_get("lenovo.com", "txt")
 ```
 
 ## playdoh Metrics
