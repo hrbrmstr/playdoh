@@ -2,5 +2,6 @@
 
 export(doh_get)
 export(doh_servers)
+export(to_inaddr_arpa)
 import(httr)
 importFrom(jsonlite,fromJSON)

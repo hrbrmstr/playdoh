@@ -13,6 +13,8 @@
 #' @export
 #' @examples
 #' doh_get("rud.is", "A")
+#' doh_get("lenovo.com", "TXT")
+#' doh_get(to_inaddr_arpa("104.244.13.104"), "PTR")
 doh_get <- function(name, type = "a", extra_params = list(), service_path = "https://9.9.9.9/dns-query") {
 
   stopifnot(is.list(extra_params))
@@ -43,6 +45,10 @@ doh_get <- function(name, type = "a", extra_params = list(), service_path = "htt
     attr(ret, "flags") <- out[c("Status", "TC", "RD", "RA", "AD", "CD")]
     attr(ret, "edns_client_subnet") <- out[["edns_client_subnet"]]
     attr(ret, "comment") <- out[["comment"]]
+
+    class(ret) <- c("tbl_df", "tbl", "data.frame")
+
+    ret
 
   }
 

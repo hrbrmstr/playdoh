@@ -26,6 +26,8 @@ DoH endpoint specified at \code{server_path}.
 }
 \examples{
 doh_get("rud.is", "A")
+doh_get("lenovo.com", "TXT")
+doh_get(to_inaddr_arpa("104.244.13.104"), "PTR")
 }
 \references{
 \url{https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html}

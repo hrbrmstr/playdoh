@@ -1,7 +1,7 @@
 Package: playdoh
 Type: Package
 Title: Make 'DNS over HTTPS' Queries
-Version: 0.1.0
+Version: 0.1.1
 Date: 2019-05-25
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 

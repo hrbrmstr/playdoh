@@ -46,41 +46,77 @@ packageVersion("playdoh")
 ### Basic functionality
 
 ``` r
-doh_get("rud.is")
-##      name type  ttl                       expires          data
-## 1 rud.is.    1 2300 Sun, 26 May 2019 18:08:58 UTC 172.93.49.183
+doh_get("apple.com", "A")
+## # A tibble: 3 x 5
+##   name        type   ttl expires                       data         
+## * <chr>      <int> <int> <chr>                         <chr>        
+## 1 apple.com.     1  1521 Mon, 27 May 2019 16:26:57 UTC 17.142.160.59
+## 2 apple.com.     1  1521 Mon, 27 May 2019 16:26:57 UTC 17.178.96.59 
+## 3 apple.com.     1  1521 Mon, 27 May 2019 16:26:57 UTC 17.172.224.47
 
-doh_get("lenovo.com", "txt")
-##           name type  ttl                       expires
-## 1  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 2  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 3  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 4  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 5  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 6  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 7  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 8  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 9  lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-## 10 lenovo.com.   16 7200 Sun, 26 May 2019 19:30:38 UTC
-##                                                                                          data
-## 1                               "facebook-domain-verification=1r2am7c2bhzrxpqyt0mda0djoquqsi"
-## 2                      "google-site-verification=sHIlSlj0U6UnCDkfHp1AolWgVEvDjWvc0TR4KaysD2c"
-## 3                      "google-site-verification=nGgukcp60rC-gFxMOJw1NHH0B4VnSchRrlfWV-He_tE"
-## 4                                                          "a82c74b37aa84e7c8580f0e32f4d795d"
-## 5             "Visit www.lenovo.com/think for information about Lenovo products and services"
-## 6                                                          "qh7hdmqm4lzs85p704d6wsybgrpsly0j"
-## 7                      "google-site-verification=VxW_e6r_Ka7A518qfX2MmIMHGnkpGbnACsjSxKFCBw0"
-## 8                                                          "ece42d7743c84d6889abda7011fe6f53"
-## 9  "iHzQJvsKnyGP2Nm2qBgL3fyBJ0CC9z4GkY/flfk4EzLP8lPxWHDDPKqZWm1TkeF5kEIL+NotYOF1wo7JtUDXXw=="
-## 10                    "v=spf1 include:spf.messagelabs.com include:_netblocks.eloqua.com ~all"
+doh_get("rud.is", "AAAA")
+## # A tibble: 1 x 5
+##   name     type   ttl expires                       data                  
+## * <chr>   <int> <int> <chr>                         <chr>                 
+## 1 rud.is.    28 43200 Tue, 28 May 2019 04:01:37 UTC 2602:ff16:3::4dfb:9ac5
+
+doh_get("rud.is", "MX")
+## # A tibble: 4 x 5
+##   name     type   ttl expires                       data                       
+## * <chr>   <int> <int> <chr>                         <chr>                      
+## 1 rud.is.    15 43200 Tue, 28 May 2019 04:01:37 UTC 40 aspmx2.googlemail.com.  
+## 2 rud.is.    15 43200 Tue, 28 May 2019 04:01:37 UTC 20 alt1.aspmx.l.google.com.
+## 3 rud.is.    15 43200 Tue, 28 May 2019 04:01:37 UTC 10 aspmx.l.google.com.     
+## 4 rud.is.    15 43200 Tue, 28 May 2019 04:01:37 UTC 30 alt2.aspmx.l.google.com.
+
+doh_get("lenovo.com", "TXT")
+## # A tibble: 10 x 5
+##    name        type   ttl expires                 data                                                                  
+##  * <chr>      <int> <int> <chr>                   <chr>                                                                 
+##  1 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"qh7hdmqm4lzs85p704d6wsybgrpsly0j\""                                
+##  2 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"Visit www.lenovo.com/think for information about Lenovo products a…
+##  3 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"a82c74b37aa84e7c8580f0e32f4d795d\""                                
+##  4 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"iHzQJvsKnyGP2Nm2qBgL3fyBJ0CC9z4GkY/flfk4EzLP8lPxWHDDPKqZWm1TkeF5kE…
+##  5 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"facebook-domain-verification=1r2am7c2bhzrxpqyt0mda0djoquqsi\""     
+##  6 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"ece42d7743c84d6889abda7011fe6f53\""                                
+##  7 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"google-site-verification=sHIlSlj0U6UnCDkfHp1AolWgVEvDjWvc0TR4KaysD…
+##  8 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"google-site-verification=VxW_e6r_Ka7A518qfX2MmIMHGnkpGbnACsjSxKFCB…
+##  9 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"google-site-verification=nGgukcp60rC-gFxMOJw1NHH0B4VnSchRrlfWV-He_…
+## 10 lenovo.co…    16  7200 Mon, 27 May 2019 18:01… "\"v=spf1 include:spf.messagelabs.com include:_netblocks.eloqua.com ~…
+
+doh_get("dataassurance.pwc.com", "CNAME")
+## # A tibble: 1 x 5
+##   name                    type   ttl expires                       data                   
+## * <chr>                  <int> <int> <chr>                         <chr>                  
+## 1 dataassurance.pwc.com.     5  3600 Mon, 27 May 2019 17:01:38 UTC f6759d2.x.incapdns.net.
+
+doh_get("rud.is", "NS")
+## # A tibble: 3 x 5
+##   name     type   ttl expires                       data            
+## * <chr>   <int> <int> <chr>                         <chr>           
+## 1 rud.is.     2 43200 Tue, 28 May 2019 04:01:38 UTC dns.mwebdns.net.
+## 2 rud.is.     2 43200 Tue, 28 May 2019 04:01:38 UTC dns.mwebdns.eu. 
+## 3 rud.is.     2 43200 Tue, 28 May 2019 04:01:38 UTC dns.mwebdns.de.
+
+doh_get("rud.is", "SOA")
+## # A tibble: 1 x 5
+##   name     type   ttl expires                     data                                                                  
+## * <chr>   <int> <int> <chr>                       <chr>                                                                 
+## 1 rud.is.     6 43200 Tue, 28 May 2019 04:01:38 … dns.mwebdns.de. hostmaster.mandoraweb.de. 2010012659 10800 3600 60480…
+
+doh_get(to_inaddr_arpa("104.244.13.104"), "PTR")
+## # A tibble: 1 x 5
+##   name                          type   ttl expires                       data                         
+## * <chr>                        <int> <int> <chr>                         <chr>                        
+## 1 104.13.244.104.in-addr.arpa.    12 43200 Tue, 28 May 2019 04:01:38 UTC archive.farsightsecurity.com.
 ```
 
 ## playdoh Metrics
 
-| Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| R    |        6 | 0.86 | 107 | 0.91 |          20 | 0.48 |       47 | 0.57 |
-| Rmd  |        1 | 0.14 |  11 | 0.09 |          22 | 0.52 |       36 | 0.43 |
+| Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines | (%) |
+| :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | --: |
+| R    |        7 | 0.88 | 125 | 0.88 |          25 | 0.47 |       54 | 0.6 |
+| Rmd  |        1 | 0.12 |  17 | 0.12 |          28 | 0.53 |       36 | 0.4 |
 
 ## Code of Conduct
 

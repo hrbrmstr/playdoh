@@ -51,10 +51,22 @@ packageVersion("playdoh")
 
 ### Basic functionality
 
-```{r}
-doh_get("rud.is")
+```{r doh2}
+doh_get("apple.com", "A")
 
-doh_get("lenovo.com", "txt")
+doh_get("rud.is", "AAAA")
+
+doh_get("rud.is", "MX")
+
+doh_get("lenovo.com", "TXT")
+
+doh_get("dataassurance.pwc.com", "CNAME")
+
+doh_get("rud.is", "NS")
+
+doh_get("rud.is", "SOA")
+
+doh_get(to_inaddr_arpa("104.244.13.104"), "PTR")
 ```
 
 ## playdoh Metrics
