@@ -26,7 +26,13 @@ DoH RTFM: <https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-05.html>
 
 The following functions are implemented:
 
-- `doh_post`: Make a POST DoH Request (wireformat)
+### Utility
+
+- `to_inaddr_arpa`:	Convert a vector of IPv4 addresses to in-addr.arpa format
+
+### DoH
+
+- `doh_get`: Make a DoH Request (GET/REST)
 
 ## Installation
 
